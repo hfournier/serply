@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Solutions",
+    "links": [
+      {
+        "title": "Google News API",
+        "href": "https://serply.io/google-news-api"
+      },
+      {
+        "title": "Google Image API",
+        "href": "https://serply.io/google-images-api"
+      },
+      {
+        "title": "Google Scholar API",
+        "href": "https://serply.io/google-scholar-api"
+      },
+      {
+        "title": "Google Video API",
+        "href": "https://serply.io/google-video-api"
+      },
+      {
+        "title": "Google Crawl API",
+        "href": "https://serply.io/google-crawl-api"
+      },
+      {
+        "title": "Google SERP API",
+        "href": "https://serply.io/google-serp-api"
+      }
+    ]
+  },
+  {
+    "title": "Support",
+    "links": [
+      { "title": "Pricing", "href": "https://serply.io/pricing" },
+      { "title": "Documentation", "href": "https://serply.io/docs" }
+    ]
+  },
+  {
+    "title": "Company",
+    "links": [{ "title": "Blog", "href": "https://serply.io/blog" }]
+  },
+  {
+    "title": "Legal",
+    "links": [
+      { "title": "Privacy", "href": "https://serply.io/privacy" },
+      { "title": "Terms", "href": "https://serply.io/terms" }
+    ]
+  }
+]

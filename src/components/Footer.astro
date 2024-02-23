@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+import FooterNavLinks from "@components/FooterNavLinks.astro";
+import navLinks from "@data/footer-nav.json";
+---
+
+<footer class="bg-slate-50 py-12 sm:mt-12">
+  <div class="px-8 space-y-8 max-w-6xl mx-auto">
+    <div class="flex flex-col xl:flex-row gap-12 py-4">
+      <div class="space-y-8">
+        <Icon class="h-10 w-auto" name="logo" />
+        <div class="text-slate-500">
+          Simple and fast SERP APIs designed for builders.
+        </div>
+        <a class="inline-block" href="https://github.com/serply-inc"
+          ><span class="sr-only">Github</span>
+          <Icon
+            class="size-6 text-slate-400 hover:text-slate-500"
+            name="mdi:github"
+          />
+        </a>
+      </div>
+      <nav class="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-16">
+        {
+          navLinks.map((navLink) => (
+            <FooterNavLinks title={navLink.title} links={navLink.links} />
+          ))
+        }
+      </nav>
+    </div>
+    <hr class="" />
+    <div class="text-sm text-slate-500 xl:text-center">
+      Copyright © 2024 Serply, Inc. All rights reserved.
+    </div>
+  </div>
+</footer>

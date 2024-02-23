@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .scrollable::-webkit-scrollbar {
+    @apply h-2 w-2 bg-slate-200 dark:bg-slate-800;
+  }
+  .scrollable::-webkit-scrollbar-track {
+    @apply my-1 rounded-full bg-slate-200 dark:bg-slate-800;
+  }
+  .scrollable::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-400 hover:bg-slate-500 dark:bg-slate-600 dark:hover:bg-slate-500;
+  }
+  .dark .scrollable::-webkit-scrollbar {
+    @apply bg-slate-800;
+  }
+  .dark .scrollable::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+  .dark .scrollable::-webkit-scrollbar-thumb {
+    @apply bg-slate-600 hover:bg-slate-500;
+  }
+  @supports (scrollbar-color: darkgray lightgray) {
+    .scrollable {
+      scrollbar-width: thin;
+      scrollbar-color: theme(colors.slate.200) theme(colors.slate.400);
+    }
+    .dark.scrollable,
+    .dark .scrollable {
+      scrollbar-color: theme(colors.slate.800) theme(colors.slate.600);
+    }
+  }
+}

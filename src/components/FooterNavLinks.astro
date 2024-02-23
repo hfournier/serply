@@ -1,0 +1,22 @@
+---
+type Props = {
+  title: string;
+  links: { title: string; href: string }[];
+};
+const { title, links } = Astro.props;
+---
+
+<div class="space-y-4">
+  <h3 class="text-lg font-semibold text-slate-600">{title}</h3>
+  <ul class="flex flex-col gap-3 text-slate-500 text-sm">
+    {
+      links.map((link) => (
+        <li class="">
+          <a class="" href={link.href}>
+            {link.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
