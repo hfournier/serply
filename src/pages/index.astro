@@ -1,73 +1,70 @@
 ---
-import { Icon } from "astro-icon/components";
-import BaseLayout from "@layouts/BaseLayout.astro";
-import Hero from "@components/Hero.astro";
-import SideBySide from "@components/SideBySide.astro";
-import SideBox from "@components/SideBox.astro";
-import SideText from "@components/SideText.astro";
+import { Icon } from "astro-icon/components"
+import BaseLayout from "@layouts/BaseLayout.astro"
+import Hero from "@components/Hero.astro"
+import SideBySide from "@components/SideBySide.astro"
+import SideBox from "@components/SideBox.astro"
+import SideText from "@components/SideText.astro"
 ---
 
 <BaseLayout>
-  <slot slot="head">
-    <title>Google Search API | Serply.io</title>
-    <meta
-      name="description"
-      content="Best Google Search API for SERPs, Images, Scholar, Video, Crawl, and More!"
-    />
-  </slot>
-  <Hero />
-  <div
-    class="space-y-12 sm:space-y-24 lg:space-y-48 py-12 sm:py-24 max-w-6xl mx-auto">
-    <SideBySide>
-      <SideBox>
-        <div
-          class="px-12 py-6 rounded-lg border border-slate-200 bg-slate-50 flex gap-4 items-center">
-          <Icon class="size-8 text-green-600" name="mdi:check" />
-          <div>I'm not a robot.</div>
-        </div>
-      </SideBox>
-      <SideText title="Never get blocked by captcha again">
-        Get Google search results data without getting blocked by captcha. Build
-        tools you can rely on with a simple API request.
-      </SideText>
-    </SideBySide>
-    <SideBySide>
-      <SideBox>
-        <div class="flex flex-col gap-4 items-center">
-          <Icon class="size-12 text-red-500" name="fa6-solid:gauge" />
-          <div class="text-lg">Blazingly Fast.</div>
-        </div>
-      </SideBox>
-      <SideText title="Get real-time results in less than 300ms">
-        Deliver your app responses faster with blazing response times. On
-        average, the latency is 279ms on hundreds of millions of requests.
-      </SideText>
-    </SideBySide>
-    <SideBySide>
-      <SideBox>
-        <div class="px-6 py-3 rounded-full border border-slate-200 bg-slate-50">
-          "Stanford University" site:linkedin.com/company
-        </div>
-      </SideBox>
-      <SideText title="Use accurate and precise data in your apps">
-        Use advanced search queries to get the exact data you need. Get data
-        from Google search, Google news, Google images, and SERP rankings.
-      </SideText>
-    </SideBySide>
-    <SideBySide>
-      <SideBox>
-        <div class="flex flex-col gap-4 items-center">
-          <Icon
-            class="size-12 text-blue-500"
-            name="heroicons-outline:support"
-          />
-          <div class="text-lg">Support + Documentation</div>
-        </div>
-      </SideBox>
-      <SideText title="Get help when you need it">
-        100% service level for 4 years and counting. If you need help or have a
-        feature request, we respond in hours, not days.
-      </SideText>
-    </SideBySide>
-  </div>
+	<slot slot="head">
+		<title>Google Search API | Serply.io</title>
+		<meta
+			name="description"
+			content="Best Google Search API for SERPs, Images, Scholar, Video, Crawl, and More!"
+		/>
+	</slot>
+	<Hero />
+	<div class="mx-auto max-w-6xl space-y-12 py-12 sm:space-y-24 sm:py-24 lg:space-y-48">
+		<SideBySide>
+			<SideBox>
+				<div
+					class="flex items-center gap-4 rounded-lg border border-slate-200 bg-slate-50 px-12 py-6"
+				>
+					<Icon class="size-8 text-green-600" name="mdi:check" />
+					<div>I'm not a robot.</div>
+				</div>
+			</SideBox>
+			<SideText title="Never get blocked by captcha again">
+				Get Google search results data without getting blocked by captcha. Build tools you can rely
+				on with a simple API request.
+			</SideText>
+		</SideBySide>
+		<SideBySide>
+			<SideBox>
+				<div class="flex flex-col items-center gap-4">
+					<Icon class="size-12 text-red-500" name="fa6-solid:gauge" />
+					<div class="text-lg">Blazingly Fast.</div>
+				</div>
+			</SideBox>
+			<SideText title="Get real-time results in less than 300ms">
+				Deliver your app responses faster with blazing response times. On average, the latency is
+				279ms on hundreds of millions of requests.
+			</SideText>
+		</SideBySide>
+		<SideBySide>
+			<SideBox>
+				<div class="rounded-full border border-slate-200 bg-slate-50 px-6 py-3">
+					"Stanford University" site:linkedin.com/company
+				</div>
+			</SideBox>
+			<SideText title="Use accurate and precise data in your apps">
+				Use advanced search queries to get the exact data you need. Get data from Google search,
+				Google news, Google images, and SERP rankings.
+			</SideText>
+		</SideBySide>
+		<SideBySide>
+			<SideBox>
+				<div class="flex flex-col items-center gap-4">
+					<Icon class="size-12 text-blue-500" name="heroicons-outline:support" />
+					<div class="text-lg">Support + Documentation</div>
+				</div>
+			</SideBox>
+			<SideText title="Get help when you need it">
+				100% service level for 4 years and counting. If you need help or have a feature request, we
+				respond in hours, not days.
+			</SideText>
+		</SideBySide>
+	</div>
 </BaseLayout>

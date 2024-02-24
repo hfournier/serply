@@ -1,64 +1,65 @@
 ---
-import navLinks from "@data/nav.json";
-import { Icon } from "astro-icon/components";
+import navLinks from "@data/nav.json"
+import { Icon } from "astro-icon/components"
 ---
 
 <header
-  class="relative flex gap-12 items-center justify-between w-full px-6 lg:px-8 py-10 max-w-6xl mx-auto">
-  <Icon class="h-10 w-auto" name="logo" />
-  <nav class="grow hidden md:block">
-    <ul class="flex gap-12">
-      {
-        navLinks.map((navLink) => (
-          <li class="">
-            <a
-              class="inline-block px-2 py-1 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-              href={navLink.link}>
-              {navLink.label}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </nav>
-  <div class="flex items-center gap-4">
-    <a
-      class="px-4 py-2 bg-blue-600 rounded-full font-semibold text-white"
-      href="#">Get started <span class="hidden md:inline">for free</span></a
-    >
-    <input
-      id="mnuButton"
-      class="peer md:hidden appearance-none"
-      type="checkbox"
-    />
-    <label
-      class="peer-checked:[&>svg:first-child]:hidden peer-checked:[&>svg:last-child]:block md:hidden"
-      for="mnuButton">
-      <Icon class="size-6" name="mdi:menu" />
-      <Icon class="hidden size-6" name="mdi:close" />
-    </label>
-    <nav
-      class="peer-checked:block hidden md:hidden md:peer-checked:hidden absolute top-20 right-6 bg-white/95 border border-slate-200 p-8 rounded-lg shadow-lg">
-      <ul class="flex flex-col gap-8">
-        {
-          navLinks.map((navLink) => (
-            <li class="">
-              <a
-                class="inline-block px-2 py-1 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-                href={navLink.link}>
-                {navLink.label}
-              </a>
-            </li>
-          ))
-        }
-        <li class="border-t border-slate-300">
-          <a
-            class="inline-block px-2 pb-2 pt-5 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-            href="#">
-            Sign in
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+	class="relative mx-auto flex w-full max-w-6xl items-center justify-between gap-12 px-6 py-10 lg:px-8"
+>
+	<Icon class="h-10 w-auto" name="logo" />
+	<nav class="hidden grow md:block">
+		<ul class="flex gap-12">
+			{
+				navLinks.map((navLink) => (
+					<li class="">
+						<a
+							class="inline-block rounded-lg px-2 py-1 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+							href={navLink.link}
+						>
+							{navLink.label}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+	<div class="flex items-center gap-4">
+		<a class="rounded-full bg-blue-600 px-4 py-2 font-semibold text-white" href="#"
+			>Get started <span class="hidden md:inline">for free</span></a
+		>
+		<input id="mnuButton" class="peer appearance-none md:hidden" type="checkbox" />
+		<label
+			class="md:hidden peer-checked:[&>svg:first-child]:hidden peer-checked:[&>svg:last-child]:block"
+			for="mnuButton"
+		>
+			<Icon class="size-6" name="mdi:menu" />
+			<Icon class="hidden size-6" name="mdi:close" />
+		</label>
+		<nav
+			class="absolute right-6 top-20 hidden rounded-lg border border-slate-200 bg-white/95 p-8 shadow-lg peer-checked:block md:hidden md:peer-checked:hidden"
+		>
+			<ul class="flex flex-col gap-8">
+				{
+					navLinks.map((navLink) => (
+						<li class="">
+							<a
+								class="inline-block rounded-lg px-2 py-1 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+								href={navLink.link}
+							>
+								{navLink.label}
+							</a>
+						</li>
+					))
+				}
+				<li class="border-t border-slate-300">
+					<a
+						class="inline-block rounded-lg px-2 pb-2 pt-5 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+						href="#"
+					>
+						Sign in
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
 </header>

@@ -1,29 +1,22 @@
 ---
-import { Image } from "astro:assets";
-import google_search_api_code from "@data/google-search-api-code.json";
-import google_search_api from "@assets/images/google-search-api.webp";
-import { Code } from "astro:components";
+import { Image } from "astro:assets"
+import google_search_api_code from "@data/google-search-api-code.json"
+import google_search_api from "@assets/images/google-search-api.webp"
+import { Code } from "astro:components"
 ---
 
-<div class="flex flex-col gap-8 items-center px-8 py-12 max-w-6xl mx-auto">
-  <h1 class="text-6xl lg:text-7xl font-bold">Google Search API</h1>
-  <div class="text-2xl text-slate-600 max-w-2xl text-center">
-    Get accurate, real-time Google search and SERP results as JSON in seconds.
-    Less bloat than alternatives.
-  </div>
-  <div class="grid sm:grid-cols-2 shadow-lg rounded-lg">
-    <Image
-      class="max-h-full"
-      src={google_search_api}
-      alt="Screenshot of Google search results"
-    />
-    <div
-      class="scrollable overflow-scroll [&>pre]:p-4 [&>pre]:text-xs [&>pre]:!overflow-x-visible aspect-[2400/2306]">
-      <Code
-        code={JSON.stringify(google_search_api_code, null, 2)}
-        lang="json"
-        theme="dark-plus"
-      />
-    </div>
-  </div>
+<div class="mx-auto flex max-w-6xl flex-col items-center gap-8 px-8 py-12">
+	<h1 class="text-6xl font-bold lg:text-7xl">Google Search API</h1>
+	<div class="max-w-2xl text-center text-2xl text-slate-600">
+		Get accurate, real-time Google search and SERP results as JSON in seconds. Less bloat than
+		alternatives.
+	</div>
+	<div class="grid rounded-lg shadow-lg sm:grid-cols-2">
+		<Image class="max-h-full" src={google_search_api} alt="Screenshot of Google search results" />
+		<div
+			class="scrollable aspect-[2400/2306] overflow-scroll [&>pre]:!overflow-x-visible [&>pre]:p-4 [&>pre]:text-xs"
+		>
+			<Code code={JSON.stringify(google_search_api_code, null, 2)} lang="json" theme="dark-plus" />
+		</div>
+	</div>
 </div>

@@ -1,22 +1,22 @@
 ---
-import "../styles/tailwind.css";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
+import "../styles/tailwind.css"
+import Footer from "@components/Footer.astro"
+import Header from "@components/Header.astro"
 ---
 
 <html lang="en" class="scrollable scroll-smooth bg-white">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <slot name="head" />
-  </head>
-  <body class="min-h-dvh flex flex-col">
-    <Header />
-    <main class="grow lg:px-8">
-      <slot />
-    </main>
-    <Footer />
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<slot name="head" />
+	</head>
+	<body class="flex min-h-dvh flex-col">
+		<Header />
+		<main class="grow lg:px-8">
+			<slot />
+		</main>
+		<Footer />
+	</body>
 </html>
