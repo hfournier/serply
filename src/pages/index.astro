@@ -22,7 +22,7 @@ import SideText from "@components/SideText.astro"
 				<div
 					class="flex items-center gap-4 rounded-lg border border-slate-200 bg-slate-50 px-12 py-6"
 				>
-					<Icon class="size-8 text-green-600" name="mdi:check" />
+					<Icon class="size-8 text-green-600" name="mdi:check" aria-label="Check mark icon" />
 					<div>I'm not a robot.</div>
 				</div>
 			</SideBox>
@@ -34,7 +34,7 @@ import SideText from "@components/SideText.astro"
 		<SideBySide>
 			<SideBox>
 				<div class="flex flex-col items-center gap-4">
-					<Icon class="size-12 text-red-500" name="fa6-solid:gauge" />
+					<Icon class="size-12 text-red-500" name="fa6-solid:gauge" aria-label="Gauge icon" />
 					<div class="text-lg">Blazingly Fast.</div>
 				</div>
 			</SideBox>
@@ -57,7 +57,11 @@ import SideText from "@components/SideText.astro"
 		<SideBySide>
 			<SideBox>
 				<div class="flex flex-col items-center gap-4">
-					<Icon class="size-12 text-blue-500" name="heroicons-outline:support" />
+					<Icon
+						class="size-12 text-blue-500"
+						name="heroicons-outline:support"
+						aria-label="Support icon"
+					/>
 					<div class="text-lg">Support + Documentation</div>
 				</div>
 			</SideBox>

@@ -12,7 +12,13 @@ import { Code } from "astro:components"
 		alternatives.
 	</div>
 	<div class="grid rounded-lg shadow-lg sm:grid-cols-2">
-		<Image class="max-h-full" src={google_search_api} alt="Screenshot of Google search results" />
+		<Image
+			class="max-h-full"
+			src={google_search_api}
+			width="544"
+			loading="eager"
+			alt="Screenshot of Google search results"
+		/>
 		<div
 			class="scrollable aspect-[2400/2306] overflow-scroll [&>pre]:!overflow-x-visible [&>pre]:p-4 [&>pre]:text-xs"
 		>
